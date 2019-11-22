@@ -1,0 +1,118 @@
+// --------------------------------------------------------------
+// Color Glossary - needs updating
+// --------------------------------------------------------------
+// Dark gray (text):            #333333
+
+// --------------------------------------------------------------
+// Custom variables 
+// --------------------------------------------------------------
+// $white: #FFF;
+// $black: #1A1A1A;
+// $brand-black: #000;
+// $black-medium: #282826;
+// $charcoal: #282826; 
+// $charcoal-medium: #2A2A2A;
+// // $gray: #C2C2C2;
+// $gray-medium: #EBEBEB; 
+// $gray-dimmed: #FAFAFA;
+// // $gray-light: #FDFDFD;
+
+$brand-primary:         #3c3b3b;
+$brand-primary-dark:    darken($brand-primary, 6%) !default;
+// $brand-primary-medium: #293134 !default;
+// $brand-secondary: #267DF4 !default;
+$brand-success:         #669900 !default; // #00AE69 #5C8600 #5cb85c
+$brand-success-dark:    darken($brand-success, 3%) !default;
+$brand-info:            #558ABB !default; // #4688DE
+$brand-info-dark:       darken($brand-info, 5%) !default;
+$brand-warning:         #FCF8DF !default; // #f0ad4e !default;
+$brand-warning-dark:    darken($brand-warning, 10%) !default;
+$brand-danger:          #B0423F !default; // #d9534f #
+$brand-danger-dark:     darken($brand-danger, 3%) !default;
+
+// $brand-warning: #f58410;
+// $brand-warning-dark: #e96300;
+
+
+// $brand-link-color: $brand-primary-medium !default; // processewire pink - #EB315F
+
+// $border-radius-base: 3px;
+// $border-color-light: #DCDCDC;
+
+$body-bg-color:         #F4F4F4 !default;
+
+// Palette.
+$palette: (
+  bg:							  #ffffff,
+  bg-alt:						#f4f4f4,
+  fg:							  #646464,
+  fg-bold:					#3c3b3b,
+  fg-light:					#aaaaaa,
+  border:						rgba(160,160,160,0.3), // #A0A0A0
+  border-bg:				rgba(160,160,160,0.075),
+  border-alt:				rgba(160,160,160,0.65),
+  accent:						#2ebaae
+);
+
+$font: (
+  family:						        ('Source Sans Pro', Helvetica, sans-serif),
+  family-fixed:				      ('Courier New', monospace),
+  family-heading:				    ('Raleway', Helvetica, sans-serif),
+  weight:						        400,
+  weight-bold:				      700,
+  weight-heading:				    400,
+  weight-heading-bold:		  800,
+  weight-heading-extrabold:	900,
+  kerning-heading:			    0.25em
+);
+
+$breakpoints: (
+  xlarge:   '(max-width: 1680px)',
+  large:    '(max-width: 1280px)',
+  medium:   '(max-width: 980px)',
+  small:    '(max-width: 736px)',
+  xsmall:   '(max-width: 480px)'
+);
+
+// Size.
+$size: (
+  element-height:				  2.75em,
+  element-margin:				  2em,
+  section-spacing:			  3em,
+  section-spacing-small:	1.5em,
+  menu:						        25em
+);
+
+// --------------------------------------------------------------
+// Bootstrap variables are found in bootstrap/_variables.scss
+// --------------------------------------------------------------
+
+// Forms 
+// $input-border-focus: $brand-primary;
+// $input-border: #DDD !default;
+
+// Progress Bars
+// $progress-border-radius:      2px !default;
+
+// Typography 
+
+$font-family-sans-serif:      'Source Sans Pro', Helvetica, Arial, sans-serif !default;
+// $font-family-serif:         Georgia, "Times New Roman", Times, serif !default;
+$font-size-base:              16px !default;
+$line-height-base:            1.75 !default; // 20/14
+
+$headings-font-family:        'Raleway', Helvetica, sans-serif !default;
+// $headings-font-weight:        800 !default;
+$headings-line-height:        1.2 !default;
+
+// --------------------------------------------------------------
+// Custom module variables  
+// --------------------------------------------------------------
+
+$table-hover-bg-color:        #F2F7FA;
+
+$btn-font-size-lg:            10px;
+$btn-line-height-lg:          1.5 !default;
+$btn-border-radius:           0;
+$btn-padding-lg-vertical:     16px !default;  
+$btn-padding-lg-horizontal:   26px !default;  

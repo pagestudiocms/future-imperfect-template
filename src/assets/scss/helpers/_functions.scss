@@ -1,0 +1,33 @@
+// Gets a palette value.
+// @param {string} $keys Key(s).
+// @return {string} Value.
+@function _palette($keys) {
+  @return map-get($palette, $keys...);
+}
+
+// Gets a size value.
+// @param {string} $keys Key(s).
+// @return {string} Value.
+@function _size($keys...) {
+  @return map-get($size, $keys...);
+}
+
+/// Gets a font value.
+/// @param {string} $keys Key(s).
+/// @return {string} Value.
+@function _font($keys...) {
+	@return map-get($font, $keys...);
+}
+
+/// Encodes a SVG data URL so IE doesn't choke (via codepen.io/jakob-e/pen/YXXBrp).
+/// @param {string} $svg SVG data URL.
+/// @return {string} Encoded SVG data URL.
+@function svg-url($svg) {
+  $svg: str-replace($svg, '"', '\'');
+  $svg: str-replace($svg, '<', '%3C');
+  $svg: str-replace($svg, '>', '%3E');
+  $svg: str-replace($svg, '&', '%26');
+  $svg: str-replace($svg, '#', '%23');
+
+  @return url("data:image/svg+xml;charset=utf8,#{$svg}");
+}

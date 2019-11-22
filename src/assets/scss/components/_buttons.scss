@@ -1,0 +1,98 @@
+.btn {
+  &[class*="btn-"] {
+    // @include border-radius($btn-border-radius);
+    text-transform: uppercase;
+    letter-spacing: _font(kerning-heading);
+    font-weight: 800;
+    font-family: _font(family-heading);
+  }
+  // &[class*="btn-xs"] {
+    // font-size: 10px;
+    // padding: 4px 8px;
+  // }
+  // Bootstrap4 style focus 
+  // &:focus {
+    // box-shadow: 0 0 0 .2rem rgba(108,117,125,.5);
+  // }
+  
+}
+
+.btn-lg {
+  @include button-size(
+    $btn-padding-lg-vertical, 
+    $btn-padding-lg-horizontal, 
+    $btn-font-size-lg, 
+    $btn-line-height-lg, 
+    0
+  );
+}
+
+// ---------------------------------------------------------------
+// Outlined buttons 
+// ---------------------------------------------------------------
+
+// Remove all backgrounds
+.btn-outline-primary {
+  @include button-outline-variant($btn-primary-bg);
+}
+//.btn-outline-secondary {
+//  @include button-outline-variant($btn-secondary-border);
+//}
+.btn-outline-info {
+  @include button-outline-variant($btn-info-bg);
+}
+.btn-outline-success {
+  @include button-outline-variant($btn-success-bg);
+}
+.btn-outline-warning {
+  @include button-outline-variant($btn-warning-bg);
+}
+.btn-outline-danger {
+  @include button-outline-variant($btn-danger-bg);
+}
+
+// ---------------------------------------------------------------
+// Button Loading animation
+// ---------------------------------------------------------------
+ 
+.btn-loading {
+	color: transparent !important;
+	pointer-events: none;
+	position: relative;
+
+  &:before {
+    content: "";
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    border: 0 none;
+    margin-right: 0;
+    transition: all .5s;
+  }
+  
+  &:before {
+    left: calc(50% - (15px / 2));
+		top: calc(50% - (15px / 2));
+    transform-origin: center;
+		position: absolute !important;
+    
+    width: 15px;
+    height: 15px;
+    border: 2px solid white;
+    border-top-color: transparent;
+    margin-right: 10px;
+    // animation: ps-loader 1s infinite;
+    animation: ps-loader 600ms infinite linear;
+  }
+}
+
+.btn {
+  &.btn-default,
+  &.btn-warning {
+    &.btn-loading:before {
+      border: 2px solid #313131;
+      border-top-color: transparent;
+    }
+  }
+}

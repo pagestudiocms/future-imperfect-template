@@ -1,0 +1,270 @@
+	.post {
+    @extend .card;
+    border: solid 1px _palette(border);
+    @inclued border-radius(0);
+    > .post-title {
+      
+    }
+    > .card-heading {
+      padding: 0;
+      border-bottom: solid 1px _palette(border);
+      .title {
+				padding: (_size(section-spacing) * 1.25) _size(section-spacing) (_size(section-spacing) * 1.1) _size(section-spacing);
+        border-right: solid 1px _palette(border);
+
+				h2 {
+					font-weight: 900;
+					font-size: 1.6em;
+          letter-spacing: 3px;
+				}
+        
+				> p {
+          font-family: $headings-font-family;
+          font-weight: normal;
+          font-size: 0.8em;
+          letter-spacing: _font(kerning-heading);
+          text-transform: uppercase;
+					margin-bottom: 0;
+				}
+			}
+      .meta {
+				padding: _size(section-spacing) * 1.25 _size(section-spacing);
+				text-align: right;
+
+				> * {
+					margin: 0 0 (_size(element-margin) * 0.5) 0;
+				}
+
+				> :last-child {
+					margin-bottom: 0;
+				}
+
+				.published {
+					color: _palette(fg-bold);
+					display: block;
+					font-family: $headings-font-family;
+					font-size: 0.7em;
+					font-weight: 400;
+					letter-spacing: _font(kerning-heading);
+					margin-top: 0.5em;
+					text-transform: uppercase;
+					white-space: nowrap;
+				}
+        
+        .author {
+          text-decoration: none;
+          &:hover {
+            text-decoration: none;
+          }
+          > .name {
+            font-weight: 300;
+            letter-spacing: _font(kerning-heading);
+            text-transform: uppercase;
+            display: inline;
+            margin: 0 1.5em 0 1.5em;
+            padding-bottom: 3px;
+            @include transition(border-bottom-color 0.2s ease);
+            border-bottom: dotted 1px rgba(160, 160, 160, 0.65);
+          }
+          > img {
+            @include border-radius(50%);
+          }
+        }
+			}
+    }
+    .card-img-wrapper {
+      overflow: hidden;
+      margin-bottom: 2.7em;
+      .card-img-top {
+        width: 100%;
+        &:hover {
+          @include transform('scale(1.05)');
+        }
+      }
+    }
+    > .card-body {
+      padding: 2.7em 2.7em 1.2em;
+    }
+    > .card-footer {
+      border-top: none;
+      background: #FFF;
+      background-color: #FFF;
+      padding: 0 2.9em 1.2em;
+      @include clearfix;
+
+			.actions {
+				@extend .pull-left;
+        padding: 0;
+        list-style: none;
+			}
+
+			.stats {
+        @extend .pull-right;
+        
+				cursor: default;
+				list-style: none;
+				padding: 0;
+
+				li {
+					border-left: solid 1px _palette(border);
+					display: inline-block;
+					font-family: $headings-font-family;
+					font-size: 0.6em;
+					font-weight: _font(weight-heading);
+					letter-spacing: _font(kerning-heading);
+					line-height: 1;
+					margin: 0 0 0 2em;
+					padding: 0 0 0 2em;
+					text-transform: uppercase;
+          
+          > a:hover {
+            text-decoration: none;
+          }
+
+					&:first-child {
+						border-left: 0;
+						margin-left: 0;
+						padding-left: 0;
+            padding-bottom: 3px;
+            @include transition(border-bottom-color 0.2s ease);
+            border-bottom: dotted 1px rgba(160, 160, 160, 0.65);
+					}
+
+					.icon {
+						border-bottom: 0;
+
+						&:before {
+							color: _palette(border);
+							margin-right: 0.75em;
+						}
+					}
+				}
+			}
+    }
+    
+    // @include breakpoint(large) {
+			// margin: 0 0 _size(section-spacing) 0;
+			// text-align: center;
+
+			// header {
+				// h2 {
+					// font-size: 2em;
+				// }
+
+				// p {
+					// font-size: 0.7em;
+				// }
+			// }
+		// }
+  }
+  
+  // ---------------------------------------------------------------------------
+  // Article Cards 
+  // ---------------------------------------------------------------------------
+  
+  // .article-list {  
+    .mini-post-card {
+      @extend .card;
+      border: solid 1px _palette(border);
+      @inclued border-radius(0);
+    
+      > header {
+        @extend .card-heading;
+        
+      }
+      .card-body {
+        padding: 0;
+        .featured-image-wrapper {
+          overflow: hidden;
+          .featured-image {
+            width: 100%;
+            &:hover {
+              @include transform('scale(1.05)');
+            }
+          }
+        }
+      }
+      .card-footer {
+        @include clearfix;
+        background-color: #FFF;
+        .title {
+          h3 {
+            font-weight: 800;
+            font-size: 0.8em;
+            letter-spacing: _font(kerning-heading);
+            margin-top: 1em;
+            margin-bottom: .6em;
+          }
+          
+          .published {
+            color: _palette(fg-bold);
+            display: block;
+            font-family: $headings-font-family;
+            font-size: 0.7em;
+            font-weight: 400;
+            letter-spacing: _font(kerning-heading);
+            text-transform: uppercase;
+            white-space: nowrap;
+            margin-top: 0.5em;
+          }
+        }
+        .author {
+          text-decoration: none;
+          &:hover {
+            text-decoration: none;
+          }
+          > .name {
+            font-weight: 300;
+            letter-spacing: _font(kerning-heading);
+            text-transform: uppercase;
+            display: inline;
+            margin: 0 1.5em 0 1.5em;
+            padding-bottom: 3px;
+            @include transition(border-bottom-color 0.2s ease);
+            border-bottom: dotted 1px rgba(160, 160, 160, 0.65);
+          }
+          > img {
+            @include border-radius(50%);
+          }
+        }
+      }
+    }
+    
+  // }
+  
+  // ---------------------------------------------------------------------------
+  // Article list 
+  // ---------------------------------------------------------------------------
+  
+  .posts-list {
+    &.media-list {
+      > .media {
+        margin-bottom: 1.5em;
+        border-bottom: solid 1px _palette(border);
+        padding-bottom: 30px;
+        &:last-child {
+          border-bottom: none;
+        }
+        .media-body {
+          h3 {
+            font-weight: 800;
+            font-size: 0.8em;
+            letter-spacing: _font(kerning-heading);
+            margin-top: .8em;
+            margin-bottom: .6em;
+          }
+          .published {
+            color: _palette(fg-bold);
+            display: block;
+            font-family: $headings-font-family;
+            font-size: 0.7em;
+            font-weight: 400;
+            letter-spacing: _font(kerning-heading);
+            text-transform: uppercase;
+            white-space: nowrap;
+            margin-top: 0.5em;
+          }
+        }
+      }
+    }
+  }

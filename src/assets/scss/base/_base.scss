@@ -1,0 +1,12 @@
+@import "reset";
+
+// @include text-selection-color($black-medium);
+
+body {
+  padding-top: 3.5em;
+  background: $body-bg-color;
+  background-color: $body-bg-color;
+}
+
+@import "typography";
+
