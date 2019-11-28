@@ -10,12 +10,15 @@
     <title>Future Imperfect</title>
 
     <!-- Custom Fonts -->
-    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <!-- <link href="../build/fonts/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
     <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700|Raleway:400,800,900' rel='stylesheet' type='text/css'>
 
     <!-- Bootstrap Core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- <link href="../build/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet"> -->
+    
+    <!-- Animate.css -->
+	<link rel="stylesheet" href="../build/assets/vendors/animate/animate.css">
 
     <!-- Theme CSS -->
     <link rel="stylesheet" href="../build/assets/css/style.css">
@@ -30,7 +33,7 @@
 </head>
 <body>
 
-    <div id="wrapper" class="container-fluid">
+    <div id="wrapper">
     
         <header>
             <!-- Navigation -->
@@ -39,7 +42,7 @@
                     <!-- Brand and toggle get grouped for better mobile display -->
                     <div class="navbar-header page-scroll">
                         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                            <span class="sr-only">Toggle navigation</span>
+                            </i><span class="sr-only">Toggle navigation</span>
                             Menu <i class="fa fa-bars"></i>
                         </button>
                         <a class="navbar-brand" href="index.html">Future Imperfect</a>
@@ -54,12 +57,10 @@
                             <li><a href="contact.html">Contact</a></li>
                         </ul>
                         <div class="pull-right">
-                            <form class="navbar-form" role="search">
-                                <div class="input-group">
+                            <form class="navbar-form" id="navbar-search-form" role="search">
+                                <a class="btn btn-default btn-search-toggle"><i class="fa fa-search"></i></a>
+                                <div class="input-group input-group-sm visible">
                                     <input type="text" class="form-control" placeholder="Search" name="srch-term" id="srch-term">
-                                    <div class="input-group-btn">
-                                        <button class="btn btn-default" type="submit"><i class="fa fa-search"></i></button>
-                                    </div>
                                 </div>
                             </form>
                         </div><!-- end search-field -->
@@ -69,143 +70,143 @@
             </nav>
         </header>
 
-        <!-- Menu -->
-        <section id="menu" class="hidden">
+        <div class="container-fluid">
+            <!-- Menu -->
+            <section id="menu" class="hidden">
 
-            <!-- Search -->
-            <section>
-                <form class="search" method="get" action="#">
-                    <input type="text" name="query" placeholder="Search" />
-                </form>
+                <!-- Search -->
+                <section>
+                    <form class="search" method="get" action="#">
+                        <input type="text" name="query" placeholder="Search" />
+                    </form>
+                </section>
+
+                <!-- Links -->
+                <section>
+                    <ul class="links">
+                        <li>
+                            <a href="#">
+                                <h3>Lorem ipsum</h3>
+                                <p>Feugiat tempus veroeros dolor</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <h3>Dolor sit amet</h3>
+                                <p>Sed vitae justo condimentum</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <h3>Feugiat veroeros</h3>
+                                <p>Phasellus sed ultricies mi congue</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <h3>Etiam sed consequat</h3>
+                                <p>Porta lectus amet ultricies</p>
+                            </a>
+                        </li>
+                    </ul>
+                </section>
+
+                <!-- Actions -->
+                <section>
+                    <ul class="actions vertical">
+                        <li><a href="#" class="button big fit">Log In</a></li>
+                    </ul>
+                </section>
+
             </section>
 
-            <!-- Links -->
-            <section>
-                <ul class="links">
-                    <li>
-                        <a href="#">
-                            <h3>Lorem ipsum</h3>
-                            <p>Feugiat tempus veroeros dolor</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <h3>Dolor sit amet</h3>
-                            <p>Sed vitae justo condimentum</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <h3>Feugiat veroeros</h3>
-                            <p>Phasellus sed ultricies mi congue</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <h3>Etiam sed consequat</h3>
-                            <p>Porta lectus amet ultricies</p>
-                        </a>
-                    </li>
-                </ul>
-            </section>
-
-            <!-- Actions -->
-            <section>
-                <ul class="actions vertical">
-                    <li><a href="#" class="button big fit">Log In</a></li>
-                </ul>
-            </section>
-
-        </section>
-
-        <!-- Main -->
-        <main class="content-container" role="main" data-content-field="main-content">
-            <div id="main" class="col-md-8 col-md-push-4" style="margin-top: 1.3em;">
-            
-                <!-- Post -->
-                <article class="post">
-                    <header class="card-heading">
-                        <div class="title col-xs-8">
-                            <h2><a href="#">Magna sed adipiscing</a></h2>
-                            <p>Lorem ipsum dolor amet nullam consequat etiam feugiat</p>
-                        </div>
-                        <div class="meta col-xs-4">
-                            <time class="published" datetime="2015-11-01">November 1, 2015</time>
-                            <a href="#" class="author"><span class="name">Jane Doe</span><img src="img/avatar.jpg" alt="" /></a>
-                        </div>
-                    </header>
-                    <div class="card-body">
-                        <div class="card-img-wrapper"><!-- OR featured-image -->
-                            <img class="card-img-top" src="img/pic01.jpg" alt="Card image cap">
-                        </div>
-                        <p>Mauris neque quam, fermentum ut nisl vitae, convallis maximus nisl. Sed mattis nunc id lorem euismod placerat. Vivamus porttitor magna enim, ac accumsan tortor cursus at. Phasellus sed ultricies mi non congue ullam corper. Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
-                    </div>
-                    <footer class="card-footer">
-                        <ul class="actions">
-                            <li><a href="post.html" class="btn btn-primary btn-outline-primary btn-lg">Continue Reading</a></li>
-                        </ul>
-                        <ul class="stats">
-                            <li><a href="#">General</a></li>
-                            <li><a href="#" class="icon fa fa-heart">28</a></li>
-                            <li><a href="#" class="icon fa fa-comment">128</a></li>
-                        </ul>
-                    </footer>
-                </article>
+            <!-- Main -->
+            <main class="content-container" role="main" data-content-field="main-content">
+                <div id="main" class="col-md-8 col-md-push-4" style="margin-top: 1.3em;">
                 
-                <!-- Post -->
-                <article class="post">
-                    <header class="card-heading">
-                        <div class="title col-xs-8">
-                            <h2><a href="#">Ultricies sed magna euismod enim vitae gravida</a></h2>
-                            <p>Lorem ipsum dolor amet nullam consequat etiam feugiat</p>
+                    <!-- Post -->
+                    <article class="post">
+                        <header class="card-heading">
+                            <div class="title col-xs-8">
+                                <h2><a href="#">Magna sed adipiscing</a></h2>
+                                <p>Lorem ipsum dolor amet nullam consequat etiam feugiat</p>
+                            </div>
+                            <div class="meta col-xs-4">
+                                <time class="published" datetime="2015-11-01">November 1, 2015</time>
+                                <a href="#" class="author"><span class="name">Jane Doe</span><img src="img/avatar.jpg" alt="" /></a>
+                            </div>
+                        </header>
+                        <div class="card-body">
+                            <div class="card-img-wrapper"><!-- OR featured-image -->
+                                <img class="card-img-top" src="img/pic01.jpg" alt="Card image cap">
+                            </div>
+                            <p>Mauris neque quam, fermentum ut nisl vitae, convallis maximus nisl. Sed mattis nunc id lorem euismod placerat. Vivamus porttitor magna enim, ac accumsan tortor cursus at. Phasellus sed ultricies mi non congue ullam corper. Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
                         </div>
-                        <div class="meta col-xs-4">
-                            <time class="published" datetime="2015-11-01">November 1, 2015</time>
-                            <a href="#" class="author"><span class="name">Jane Doe</span><img src="img/avatar.jpg" alt="" /></a>
+                        <footer class="card-footer">
+                            <ul class="actions">
+                                <li><a href="post.html" class="btn btn-outline-primary ">Continue Reading</a></li>
+                            </ul>
+                            <ul class="stats">
+                                <li><a href="#">General</a></li>
+                                <li><a href="#" class="icon fa fa-heart">28</a></li>
+                                <li><a href="#" class="icon fa fa-comment">128</a></li>
+                            </ul>
+                        </footer>
+                    </article>
+                    
+                    <!-- Post -->
+                    <article class="post">
+                        <header class="card-heading">
+                            <div class="title col-xs-8">
+                                <h2><a href="#">Ultricies sed magna euismod enim vitae gravida</a></h2>
+                                <p>Lorem ipsum dolor amet nullam consequat etiam feugiat</p>
+                            </div>
+                            <div class="meta col-xs-4">
+                                <time class="published" datetime="2015-11-01">November 1, 2015</time>
+                                <a href="#" class="author"><span class="name">Jane Doe</span><img src="img/avatar.jpg" alt="" /></a>
+                            </div>
+                        </header>
+                        <div class="card-body">
+                            <div class="card-img-wrapper"><!-- OR featured-image -->
+                                <img class="card-img-top" src="img/pic01.jpg" alt="Card image cap">
+                            </div>
+                            <p>Mauris neque quam, fermentum ut nisl vitae, convallis maximus nisl. Sed mattis nunc id lorem euismod placerat. Vivamus porttitor magna enim, ac accumsan tortor cursus at. Phasellus sed ultricies mi non congue ullam corper. Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
                         </div>
+                        <footer class="card-footer">
+                            <ul class="actions">
+                                <li><a href="post.html" class="btn btn-outline-primary btn-bg-transparent ">Continue Reading</a></li>
+                            </ul>
+                            <ul class="stats">
+                                <li><a href="#">General</a></li>
+                                <li><a href="#" class="icon fa fa-heart">28</a></li>
+                                <li><a href="#" class="icon fa fa-comment">128</a></li>
+                            </ul>
+                        </footer>
+                    </article>
+
+                    <!-- Pagination -->
+                    <ul class="pager pager-large">
+                        <li class="previous disabled"><a href="#fakeLink">← Older</a></li>
+                        <li class="next"><a href="#fakeLink">Newer →</a></li>
+                    </ul>
+
+                </div>
+            </main>
+
+            <!-- Sidebar -->
+            <aside id="sidebar" class="col-md-4 col-md-pull-8">
+
+                <!-- Intro -->
+                <section id="intro">
+                    <a href="#" class="logo"><img src="img/logo.jpg" alt="" /></a>
+                    <header>
+                        <h2>Future Imperfect</h2>
+                        <p>Another fine responsive site template by <a href="http://html5up.net">HTML5 UP</a></p>
                     </header>
-                    <div class="card-body">
-                        <div class="card-img-wrapper"><!-- OR featured-image -->
-                            <img class="card-img-top" src="img/pic01.jpg" alt="Card image cap">
-                        </div>
-                        <p>Mauris neque quam, fermentum ut nisl vitae, convallis maximus nisl. Sed mattis nunc id lorem euismod placerat. Vivamus porttitor magna enim, ac accumsan tortor cursus at. Phasellus sed ultricies mi non congue ullam corper. Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
-                    </div>
-                    <footer class="card-footer">
-                        <ul class="actions">
-                            <li><a href="post.html" class="btn btn-primary btn-outline-primary btn-lg">Continue Reading</a></li>
-                        </ul>
-                        <ul class="stats">
-                            <li><a href="#">General</a></li>
-                            <li><a href="#" class="icon fa fa-heart">28</a></li>
-                            <li><a href="#" class="icon fa fa-comment">128</a></li>
-                        </ul>
-                    </footer>
-                </article>
+                </section>
 
-                <!-- Pagination -->
-                <ul class="actions pagination">
-                    <li><a href="" class="disabled button big previous">Previous Page</a></li>
-                    <li><a href="#" class="button big next">Next Page</a></li>
-                </ul>
-
-            </div>
-        </main>
-
-        <!-- Sidebar -->
-        <aside id="sidebar" class="col-md-4 col-md-pull-8">
-
-            <!-- Intro -->
-            <section id="intro">
-                <a href="#" class="logo"><img src="img/logo.jpg" alt="" /></a>
-                <header>
-                    <h2>Future Imperfect</h2>
-                    <p>Another fine responsive site template by <a href="http://html5up.net">HTML5 UP</a></p>
-                </header>
-            </section>
-
-            <!-- Mini Posts -->
-            <section>
-                <div class="mini-posts">
+                <!-- Mini Posts -->
+                <section class="mini-posts">
 
                     <!-- Mini Post -->
                     <article class="mini-post-card">
@@ -267,76 +268,75 @@
                         </footer>
                     </article>
 
-                </div>
-            </section>
+                </section>
+
+                <!-- Posts List -->
+                <section>
+                    <ul class="posts-list media-list">
+                        <li class="media">
+                            <div class="media-left">
+                                <a href="#"><img class="media-object" src="img/pic08.jpg" alt="..."></a>
+                            </div>
+                            <div class="media-body">
+                                <h3 class="media-heading"><a href="#">Lorem ipsum fermentum ut nisl vitae</a></h3>
+                                <time class="published" datetime="2015-10-20">October 20, 2015</time>
+                            </div>
+                        </li>
+                        <li class="media">
+                            <div class="media-left">
+                                <a href="#"><img class="media-object" src="img/pic09.jpg" alt="..."></a>
+                            </div>
+                            <div class="media-body">
+                                <h3 class="media-heading"><a href="#">Convallis maximus nisl mattis nunc id lorem</a></h3>
+                                <time class="published" datetime="2015-10-20">October 20, 2015</time>
+                            </div>
+                        </li>
+                        <li class="media">
+                            <div class="media-left">
+                                <a href="#"><img class="media-object" src="img/pic10.jpg" alt="..."></a>
+                            </div>
+                            <div class="media-body">
+                                <h3 class="media-heading"><a href="#">Euismod amet placerat vivamus porttitor</a></h3>
+                                <time class="published" datetime="2015-10-20">October 20, 2015</time>
+                            </div>
+                        </li>
+                        <li class="media">
+                            <div class="media-left">
+                                <a href="#"><img class="media-object" src="img/pic11.jpg" alt="..."></a>
+                            </div>
+                            <div class="media-body">
+                                <h3 class="media-heading"><a href="#">Magna enim accumsan tortor cursus ultricies</a></h3>
+                                <time class="published" datetime="2015-10-20">October 20, 2015</time>
+                            </div>
+                        </li>
+                    </ul>
+                </section>
+
+                <!-- About -->
+                <section class="blurb">
+                    <h2>About</h2>
+                    <p>Mauris neque quam, fermentum ut nisl vitae, convallis maximus nisl. Sed mattis nunc id lorem euismod amet placerat. Vivamus porttitor magna enim, ac accumsan tortor cursus at phasellus sed ultricies.</p>
+                    <br />
+                    <ul class="actions list-unstyled">
+                        <li><a href="#" class="btn btn-primary ">Learn More</a></li>
+                    </ul>
+                </section>
+
+                <!-- Footer -->
+                <section id="footer">
+                    <ul class="icons list-unstyled list-inline">
+                        <li><a href="#"><i class="fa fa-twitter"></i><span class="sr-only">Twitter</span></a></li>
+                        <li><a href="#"><i class="fa fa-facebook"></i><span class="sr-only">Facebook</span></a></li>
+                        <li><a href="#"><i class="fa fa-instagram"></i><span class="sr-only">Instagram</span></a></li>
+                        <li><a href="#"><i class="fa fa-rss"></i><span class="sr-only">RSS</span></a></li>
+                        <li><a href="#"><i class="fa fa-envelope"></i><span class="sr-only">Email</span></a></li>
+                    </ul>
+                    <p class="copyright">&copy; Untitled. Design: <a href="http://html5up.net">HTML5 UP</a>. Images: <a href="http://unsplash.com">Unsplash</a>.</p>
+                </section>
+
+            </aside>
             
-            <hr />
-
-            <!-- Posts List -->
-            <section>
-                <ul class="posts-list media-list">
-                    <li class="media">
-                        <div class="media-left">
-                            <a href="#"><img class="media-object" src="img/pic08.jpg" alt="..."></a>
-                        </div>
-                        <div class="media-body">
-                            <h3 class="media-heading"><a href="#">Lorem ipsum fermentum ut nisl vitae</a></h3>
-                            <time class="published" datetime="2015-10-20">October 20, 2015</time>
-                        </div>
-                    </li>
-                    <li class="media">
-                        <div class="media-left">
-                            <a href="#"><img class="media-object" src="img/pic09.jpg" alt="..."></a>
-                        </div>
-                        <div class="media-body">
-                            <h3 class="media-heading"><a href="#">Convallis maximus nisl mattis nunc id lorem</a></h3>
-                            <time class="published" datetime="2015-10-20">October 20, 2015</time>
-                        </div>
-                    </li>
-                    <li class="media">
-                        <div class="media-left">
-                            <a href="#"><img class="media-object" src="img/pic10.jpg" alt="..."></a>
-                        </div>
-                        <div class="media-body">
-                            <h3 class="media-heading"><a href="#">Euismod amet placerat vivamus porttitor</a></h3>
-                            <time class="published" datetime="2015-10-20">October 20, 2015</time>
-                        </div>
-                    </li>
-                    <li class="media">
-                        <div class="media-left">
-                            <a href="#"><img class="media-object" src="img/pic11.jpg" alt="..."></a>
-                        </div>
-                        <div class="media-body">
-                            <h3 class="media-heading"><a href="#">Magna enim accumsan tortor cursus ultricies</a></h3>
-                            <time class="published" datetime="2015-10-20">October 20, 2015</time>
-                        </div>
-                    </li>
-                </ul>
-            </section>
-
-            <!-- About -->
-            <section class="blurb">
-                <h2>About</h2>
-                <p>Mauris neque quam, fermentum ut nisl vitae, convallis maximus nisl. Sed mattis nunc id lorem euismod amet placerat. Vivamus porttitor magna enim, ac accumsan tortor cursus at phasellus sed ultricies.</p>
-                <ul class="actions list-unstyled">
-                    <li><a href="#" class="btn btn-primary btn-outline-primary btn-lg">Learn More</a></li>
-                </ul>
-            </section>
-
-            <!-- Footer -->
-            <section id="footer">
-                <ul class="icons list-unstyled list-inline">
-                    <li><a href="#" class="fa fa-twitter"><span class="label">Twitter</span></a></li>
-                    <li><a href="#" class="fa fa-facebook"><span class="label">Facebook</span></a></li>
-                    <li><a href="#" class="fa fa-instagram"><span class="label">Instagram</span></a></li>
-                    <li><a href="#" class="fa fa-rss"><span class="label">RSS</span></a></li>
-                    <li><a href="#" class="fa fa-envelope"><span class="label">Email</span></a></li>
-                </ul>
-                <p class="copyright">&copy; Untitled. Design: <a href="http://html5up.net">HTML5 UP</a>. Images: <a href="http://unsplash.com">Unsplash</a>.</p>
-            </section>
-
-        </aside>
-
+        </div>
     </div>
 
     <!-- jQuery -->

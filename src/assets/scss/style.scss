@@ -28,10 +28,10 @@
 // --------------------------------------------------------------
 // Sass file Imports
 // --------------------------------------------------------------
-@import "helpers/variables";   // Theme specific variables 
-// @import "helpers/bootstrap";   // Bootstrap variable overrides
-@import "helpers/helpers";      // Keyframes etc.
-@import "helpers/mixins";      // Theme specific mixins 
+@import "helpers/variables";              // Theme specific variables 
+// @import "helpers/bootstrap";           // Bootstrap variable overrides
+@import "helpers/helpers";                // Keyframes etc.
+@import "helpers/mixins";                 // Theme specific mixins 
 @import "helpers/functions";
 @import "vendors/bootstrap/_bootstrap";   // Bootstrap variables 
 @import "vendors/my-sass-mixins/mixins";  // Framework specific mixins 

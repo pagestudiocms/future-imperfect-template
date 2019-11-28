@@ -17,21 +17,55 @@
   
 }
 
-.btn-lg {
+.btn {
   @include button-size(
-    $btn-padding-lg-vertical, 
-    $btn-padding-lg-horizontal, 
-    $btn-font-size-lg, 
-    $btn-line-height-lg, 
+    $btn-normal-padding-vertical, 
+    $btn-normal-padding-horizontal, 
+    $btn-normal-font-size, 
+    $btn-normal-line-height, 
     0
   );
 }
+
+.btn-lg {
+  @include button-size(
+    $btn-lg-padding-vertical, 
+    $btn-lg-padding-horizontal, 
+    $btn-lg-font-size, 
+    $btn-lg-line-height, 
+    0
+  );
+}
+
+.btn-sm {
+  @include button-size(
+    $btn-sm-padding-vertical, 
+    $btn-sm-padding-horizontal, 
+    $btn-sm-font-size, 
+    $btn-sm-line-height, 
+    0
+  );
+}
+
+.btn-xs {
+  @include button-size(
+    $btn-xs-padding-vertical, 
+    $btn-xs-padding-horizontal, 
+    $btn-xs-font-size, 
+    $btn-xs-line-height, 
+    0
+  );
+}
+
 
 // ---------------------------------------------------------------
 // Outlined buttons 
 // ---------------------------------------------------------------
 
 // Remove all backgrounds
+.btn-outline-default {
+  @include button-outline-variant(#CCC);
+}
 .btn-outline-primary {
   @include button-outline-variant($btn-primary-bg);
 }
@@ -93,6 +127,38 @@
     &.btn-loading:before {
       border: 2px solid #313131;
       border-top-color: transparent;
+    }
+  }
+}
+
+// ---------------------------------------------------------------
+// Pagination 
+// ---------------------------------------------------------------
+.pager {
+  li {
+    display: inline;
+    > a,
+    > span {
+      padding: $btn-normal-padding-vertical $btn-normal-padding-horizontal;
+      font-size: $btn-normal-font-size;
+      font-weight: 800;
+      font-family: _font(family-heading);
+      letter-spacing: _font(kerning-heading);
+      line-height: $btn-normal-line-height;
+      text-transform: uppercase;
+    }
+
+    > a:hover,
+    > a:focus {
+      // background-color: $brand-primary-dark;
+    }
+  }
+  &.pager-large {
+    li {      
+      > a,
+      > span {
+        padding: $btn-lg-padding-vertical $btn-lg-padding-horizontal;
+      }
     }
   }
 }
