@@ -1,0 +1,26 @@
+{
+  "name": "future-imperfect-template",
+  "version": "1.0.0",
+  "description": "A multi-purpose proprietary mobile-responsive template framework for use in the development of PageStudio templates only.",
+  "main": "index.js",
+  "dependencies": {
+    "@pagestudiocms/create-scss": "^2.6.4",
+    "@pagestudiocms/pagestudio-template-development-server": "^1.0.4",
+    "npm-run-all": "^4.1.5",
+    "node-sass": "^7.0.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "sass:build": "node-sass --output-style compressed src/scss/style.scss -o build/assets/css --source-map true",
+    "sass:watch": "node-sass src/scss/style.scss -wo build/assets/css --source-map true",
+    "start": "npm-run-all --parallel sass:watch start-server",
+    "start-server": "node ./node_modules/@pagestudiocms/pagestudio-template-development-server/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pagestudiocms/future-imperfect-template.git"
+  },
+  "author": "Cosmo Mathieu",
+  "license": "MIT",
+  "homepage": "https://github.com/pagestudiocms/future-imperfect-template#readme"
+}
